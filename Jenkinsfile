@@ -14,11 +14,11 @@ node('php'){
         // sh 'php artisan route:cache'
     }
     
-//    stage('Docker Build') {
-//        sh 'sudo docker build -t rommelalmeida/todoapi:$BUILD_NUMBER .'
-//    }
+    stage('Docker Build') {
+        sh 'sudo docker build -t rommelalmeida/todoapi:$BUILD_NUMBER .'
+    }
     
-//    stage('Docker Ship') {
-//        sh 'sudo docker push rommelalmeida/todoapi:$BUILD_NUMBER'
-//    }
+    stage('Docker Ship') {
+        sh 'sudo docker push rommelalmeida/todoapi:$BUILD_NUMBER'
+    }
 }
