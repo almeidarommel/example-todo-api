@@ -15,10 +15,10 @@ node('php'){
     }
     
     stage('Docker Build') {
-        sh 'sudo docker build -t rommelalmeida/todoapi:$BUILD_NUMBER .'
+        sh 'docker build -t rommelalmeida/todoapi:$BUILD_NUMBER .'
     }
     
     stage('Docker Ship') {
-        sh 'sudo docker push rommelalmeida/todoapi:$BUILD_NUMBER'
+        sh 'docker push rommelalmeida/todoapi:$BUILD_NUMBER'
     }
 }
